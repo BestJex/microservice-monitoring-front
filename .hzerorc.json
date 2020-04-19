@@ -1,0 +1,13 @@
+{
+  "packages": [
+    {
+      "name": "microservice-monitoring-front-logs"
+    },
+    {
+      "name": "microservice-monitoring-front-warning"
+    },
+    {
+      "name": "microservice-monitoring-front-microservice-monitoring-warning"
+    }
+  ]
+}
