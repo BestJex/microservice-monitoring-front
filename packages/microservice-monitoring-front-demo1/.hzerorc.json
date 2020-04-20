@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": true,
-    "indexRouter": "/demo1/demo-page",
-    "registerRegex": "\\/microservice-monitoring-front-demo1\\/"
-  }
-}
