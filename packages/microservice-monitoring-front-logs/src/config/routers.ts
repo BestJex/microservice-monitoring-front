@@ -9,7 +9,13 @@ const config: RoutersConfig = [
     component: () => import('../routes/hello/HelloLogsPage'),
     authorized: true,
     title: 'Hello MicroserviceMonitoringFrontLogs',
-  }
+  },
+  {
+    path: '/logs-list',
+    component: () => import('../routes/logs/List'),
+    authorized: true,
+    title: '日志列表',
+  },
 ];
 
 export default config;
