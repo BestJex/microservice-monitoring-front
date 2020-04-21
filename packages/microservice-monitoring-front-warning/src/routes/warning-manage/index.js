@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Header, Content } from 'components/Page';
-import { Form, Modal, Input, Button } from 'hzero-ui';
+import { Form } from 'hzero-ui';
 import { connect } from 'dva';
 import { Bind } from 'lodash-decorators';
 import notification from 'utils/notification';
