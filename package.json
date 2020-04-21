@@ -46,7 +46,7 @@
   "scripts": {
     "start": "hzero-cli start",
     "start:mock": "cross-env NODE_PROFILE=mock hzero-cli start",
-    "build": "hzero-cli build --all-packages",
+    "build": "hzero-cli build --all-packages node --max_old_space_size=4096",
     "build:production": "cross-env NODE_PROFILE=production hzero-cli build --only-build-micro --all-packages",
     "build:all-ms": "hzero-cli build --only-build-micro --all-packages",
     "build:ms": "hzero-cli build --only-build-micro",

@@ -1,15 +1,7 @@
-import testPageRouterConfig from '../routes/test-page/routers';
 import { RoutersConfig } from 'hzero-boot/lib/typings/IRouterConfig';
 
 const config: RoutersConfig = [
   // Insert New Router
-  ...testPageRouterConfig,
-  {
-    path: '/microservice-monitoring-front-warning/hello',
-    component: () => import('../routes/hello/HelloWarningPage'),
-    authorized: true,
-    title: 'Hello MicroserviceMonitoringFrontWarning',
-  },
   {
     path: '/email-warning',
     component: () => import('../routes/email-warning'),
@@ -27,6 +19,13 @@ const config: RoutersConfig = [
     component: () => import('../routes/wechat-warning'),
     authorized: true,
     title: '微信预警',
+  },
+  {
+    path: '/warning-manage',
+    component: () => import('../routes/warning-manage'),
+    models: ['warningManage'],
+    // authorized: true,
+    title: '预警管理',
   },
 ];
 
