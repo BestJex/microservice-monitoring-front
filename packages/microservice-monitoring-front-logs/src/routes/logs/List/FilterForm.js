@@ -11,10 +11,6 @@ const formlayout = {
 @Form.create({ fieldNameProp: null })
 export default class FilterForm extends Component {
 
-  state = {
-    display: false,
-  };
-
   /**
  *重置
  *
@@ -24,7 +20,6 @@ export default class FilterForm extends Component {
   handleFormReset() {
     const { form } = this.props;
     form.resetFields();
-    form.setFieldsValue({ 'statusCode': '' });
   };
 
   /**
@@ -45,65 +40,26 @@ export default class FilterForm extends Component {
     }
   }
 
-
-  /**
-   *展示更多查询条件
-   *
-   * @memberof FilterForm
-   */
-  @Bind()
-  toggleForm() {
-    const { display } = this.state;
-    this.setState({
-      display: !display,
-    });
-  }
-
   render() {
-    const { display } = this.state;
     const preCode = 'o2.customer.tag.model.tag';
     const { form: { getFieldDecorator }, path} = this.props;
     return (
       <Fragment>
-        <Form layout='online' {...formlayout}>
+        <Form>
           <Row>
             <Col span={18}>
               <Row>
                 <Col span={8}>
-                  <Form.Item label={intl.get(`${preCode}.activityTypeCode`).d('日志类型')} {...formlayout}>
-                    {getFieldDecorator('activityTypeCode', {})(
+                  <Form.Item label={intl.get(`${preCode}.logId`).d('日志编码')} {...formlayout}>
+                    {getFieldDecorator('logId', {})(
                       <Input />
                     )}
                   </Form.Item>
                 </Col>
                 <Col span={8}>
-                  <Form.Item label={intl.get(`${preCode}.statusCode`).d('日志状态')} {...formlayout}>
-                    {getFieldDecorator('statusCode', {
-                        // initialValue: "ACTIVE",
+                  <Form.Item label={intl.get(`${preCode}.logHost`).d('日志HOST')} {...formlayout}>
+                    {getFieldDecorator('logHost', {
                     })(
-                      <Input />
-                    )}
-                  </Form.Item>
-                </Col>
-                <Col span={8}>
-                  <Form.Item label={intl.get(`${preCode}.activityId`).d('日志来源')} {...formlayout}>
-                    {getFieldDecorator('activityId', {})(
-                      <Input />
-                    )}
-                  </Form.Item>
-                </Col>
-              </Row>
-              <Row style={{ display: display ? 'none' : 'block' }}>
-                <Col span={8}>
-                  <Form.Item label={intl.get(`${preCode}.activityName`).d('日志信息')} {...formlayout}>
-                    {getFieldDecorator('activityName', {})(
-                      <Input />
-                    )}
-                  </Form.Item>
-                </Col>
-                <Col span={8}>
-                  <Form.Item label={intl.get(`${preCode}.activityChannelCode`).d('日志标记')} {...formlayout}>
-                    {getFieldDecorator('activityChannelCode', {})(
                       <Input />
                     )}
                   </Form.Item>
@@ -141,18 +97,6 @@ export default class FilterForm extends Component {
                 >
                   {intl.get('hzero.common.button.reset').d('重置')}
                 </PermissionButton>
-                <a
-                  style={{ marginLeft: 8, display: display ? 'inline-block' : 'none' }}
-                  onClick={this.toggleForm}
-                >
-                  {intl.get(`hzero.common.button.expand`).d('展开')} <Icon type="down" />
-                </a>
-                <a
-                  style={{ marginLeft: 8, display: display ? 'none' : 'inline-block' }}
-                  onClick={this.toggleForm}
-                >
-                  {intl.get(`hzero.common.button.up`).d('收起')} <Icon type="up" />
-                </a>
               </Form.Item>
             </Col>
           </Row>
