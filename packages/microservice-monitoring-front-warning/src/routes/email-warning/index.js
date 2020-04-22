@@ -10,7 +10,7 @@ import ListTable from './ListTable';
 @connect(({ emailWarning, loading }) => ({
   emailWarning,
   loading,
-  retrieveLoading: loading.effects['emailWarning/retrieve '],
+  retrieveLoading: loading.effects['emailWarning/retrieve'],
 }))
 export default class EmailWarning extends Component {
 
@@ -25,7 +25,7 @@ export default class EmailWarning extends Component {
     dispatch({
       type: 'emailWarning/retrieve',
       payload: {
-        warningType: "邮箱预警",
+        warningType: "邮件预警",
         ...query,
       },
     });
@@ -35,18 +35,15 @@ export default class EmailWarning extends Component {
     const {
       retrieveLoading,
       form,
-      emailWarning: { pagination, list, query, warningTypeList },
+      emailWarning: { pagination, list, query },
     } = this.props;
     const filterProps = {
       onSearch: this.handleSearch,
-      warningTypeList,
     };
     const listProps = {
       loading: retrieveLoading,
       pagination,
       dataSource: list,
-      warningTypeList,
-      onChangeStatus: this.onChangeStatus,
     };
     return (
       <>

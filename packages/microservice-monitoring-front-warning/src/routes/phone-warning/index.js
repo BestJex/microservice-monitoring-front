@@ -35,18 +35,15 @@ export default class PhoneWarning extends Component {
     const {
       retrieveLoading,
       form,
-      phoneWarning: { pagination, list, query, warningTypeList },
+      phoneWarning: { pagination, list, query },
     } = this.props;
     const filterProps = {
       onSearch: this.handleSearch,
-      warningTypeList,
     };
     const listProps = {
       loading: retrieveLoading,
       pagination,
       dataSource: list,
-      warningTypeList,
-      onChangeStatus: this.onChangeStatus,
     };
     return (
       <>

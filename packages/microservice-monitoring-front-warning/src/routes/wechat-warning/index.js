@@ -25,7 +25,7 @@ export default class WeChatWarning extends Component {
     dispatch({
       type: 'wechatWarning/retrieve',
       payload: {
-        warningType: "手机短信预警",
+        warningType: "微信预警",
         ...query,
       },
     });
@@ -35,18 +35,15 @@ export default class WeChatWarning extends Component {
     const {
       retrieveLoading,
       form,
-      wechatWarning: { pagination, list, query, warningTypeList },
+      wechatWarning: { pagination, list, query },
     } = this.props;
     const filterProps = {
       onSearch: this.handleSearch,
-      warningTypeList,
     };
     const listProps = {
       loading: retrieveLoading,
       pagination,
       dataSource: list,
-      warningTypeList,
-      onChangeStatus: this.onChangeStatus,
     };
     return (
       <>

@@ -9451,7 +9451,7 @@ hzero-front-hadm@1.3.0:
     react "^16.8.3"
     react-dom "^16.8.3"
 
-hzero-front-hcnf@~1.2.0:
+hzero-front-hcnf@1.2.0:
   version "1.2.0"
   resolved "http://nexus.saas.hand-china.com/content/groups/hzero-npm-group/hzero-front-hcnf/-/hzero-front-hcnf-1.2.0.tgz#0d8ef43a68fb3f5cceb1395add86556d9c7bc3ca"
   integrity sha512-NPVg12zFYfoJkVl+d4iD+OvrS66VKhhdX0k7aWeaSvWdi6nXvC6Weg9VmOeGHr//ni99qbGZI7xHkg4VvbY6mw==
@@ -9459,7 +9459,7 @@ hzero-front-hcnf@~1.2.0:
     react "^16.8.3"
     react-dom "^16.8.3"
 
-hzero-front-hcuz@^1.3.0, hzero-front-hcuz@~1.3.1:
+hzero-front-hcuz@1.3.1, hzero-front-hcuz@^1.3.0:
   version "1.3.1"
   resolved "http://nexus.saas.hand-china.com/content/groups/hzero-npm-group/hzero-front-hcuz/-/hzero-front-hcuz-1.3.1.tgz#83dfe233163bdd4c717b33f053182ff9bfbda679"
   integrity sha512-fYexw1Z1PrplD4J2FtsB7/+t63I+kRjQfdmckFr8rCQ/Cbq2VwV1lkB1VGUhn1hiX6LG8WMZ94tAS1Bf7wJ6+g==
@@ -9492,7 +9492,7 @@ hzero-front-hmsg@1.3.0:
     react "^16.8.3"
     react-dom "^16.8.3"
 
-hzero-front-hpfm@~1.3.1:
+hzero-front-hpfm@1.3.1:
   version "1.3.1"
   resolved "http://nexus.saas.hand-china.com/content/groups/hzero-npm-group/hzero-front-hpfm/-/hzero-front-hpfm-1.3.1.tgz#2001350bfa473aa510094306f79385630f07982c"
   integrity sha512-Rcz1xIucasFUi37pW3f35kyzr5tCnoWizNr5GMkYa3FXwA8ICD0W3KqPzxLhY1XwltiSZWkoss3HIiBr6VFjtw==
@@ -9526,7 +9526,7 @@ hzero-front-util@0.1.37:
     js-yaml "^3.13.1"
     ora "^3.4.0"
 
-hzero-front@~1.3.2:
+hzero-front@1.3.2:
   version "1.3.2"
   resolved "http://nexus.saas.hand-china.com/content/groups/hzero-npm-group/hzero-front/-/hzero-front-1.3.2.tgz#bdf7ba1e30c04b8ef5ee48d54106c0ba931ca349"
   integrity sha512-KdpK+PXAIhMgEeg3N1KOYuy0DkDM7PsJFUQj9CVaLW/+fKmdxdMi7AfUnb4StRyeRlzKieSOrB6/YaXm8cWkyg==
@@ -9795,6 +9795,13 @@ imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "http://nexus.saas.hand-china.com/content/groups/hzero-npm-group/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
+
+increase-memory-limit@^1.0.6:
+  version "1.0.7"
+  resolved "http://nexus.saas.hand-china.com/content/groups/hzero-npm-group/increase-memory-limit/-/increase-memory-limit-1.0.7.tgz#80417e736e45fcfd6a3d515b435e2eaea4e62233"
+  integrity sha512-ozyn+HHAPD9VxMT1U50A7G8XXlktUWhnnEDYSeDYnQjKsNrBWHqq6XfEA0uhMdDPD+q/7rXWlzF1CbXX/c1LiQ==
+  dependencies:
+    glob "^7.1.1"
 
 indent-string@^2.1.0:
   version "2.1.0"
