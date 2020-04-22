@@ -110,11 +110,6 @@ export default class ListTable extends PureComponent {
         align: 'left',
       },
       {
-        dataIndex: 'warningContent',
-        title: intl.get(`${preCode}.warningContent`).d('微信内容'),
-        align: 'left',
-      },
-      {
         dataIndex: 'warningStatus',
         title: intl.get(`${preCode}.warningStatus`).d('微信状态'),
         align: 'left',
@@ -133,6 +128,18 @@ export default class ListTable extends PureComponent {
         dataIndex: 'creationDate',
         title: intl.get(`${preCode}.creationDate`).d('发送时间'),
         align: 'left',
+      },
+      {
+        dataIndex: 'warningContent',
+        title: intl.get(`${preCode}.warningContent`).d('微信内容'),
+        align: 'left',
+        render: (_, record) => {
+          return (
+            <a onClick={() => this.props.showDetail(record)}>
+              点击查看
+            </a>
+          );
+        },
       },
     ];
 

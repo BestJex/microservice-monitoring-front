@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Header, Content } from 'components/Page';
-import { Form } from 'hzero-ui';
+import { Modal } from 'hzero-ui';
 import { connect } from 'dva';
 import { Bind } from 'lodash-decorators';
 import FilterForm from './FilterForm';
 import ListTable from './ListTable';
 
-@Form.create({ fieldNameProp: null })
 @connect(({ emailWarning, loading }) => ({
   emailWarning,
   loading,
@@ -31,10 +30,21 @@ export default class EmailWarning extends Component {
     });
   }
 
+  @Bind()
+  showDetail(record) {
+    Modal.info({
+      width: 500,
+      title: '邮件内容',
+      content: (
+        <div dangerouslySetInnerHTML={{__html: record.warningContent}} />
+      ),
+      okText: '确定',
+    });
+  }
+
   render() {
     const {
       retrieveLoading,
-      form,
       emailWarning: { pagination, list, query },
     } = this.props;
     const filterProps = {
@@ -44,6 +54,7 @@ export default class EmailWarning extends Component {
       loading: retrieveLoading,
       pagination,
       dataSource: list,
+      showDetail: this.showDetail,
     };
     return (
       <>
