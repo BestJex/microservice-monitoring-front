@@ -8,6 +8,12 @@ const config: RoutersConfig = [
     models: ['logs'],
     title: '日志列表',
   },
+  {
+    path: '/logs-analysis',
+    component: () => import('../routes/logsAnalysis'),
+    models: ['logsAnalysis'],
+    title: '日志分析',
+  },
 ];
 
 export default config;
